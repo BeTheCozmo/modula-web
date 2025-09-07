@@ -35,7 +35,7 @@
 | ![Tela de Login](public/screenshots/login.png) | Formulário de login com suporte a "Enter". |
 | ![Tela de Registro](public/screenshots/register.png) | Formulário de registro com campos para nome, nickname, email e senha. |
 | ![Dashboard](public/screenshots/dashboard.png) | Exibição de módulos em grade com botões de ação. |
-| ![Modal de Visualização](public/screenshots/view-modal.png) | Detalhes do módulo com estrutura de arquivos e botão de cópia. |
+| ![Modal de Visualização](public/screenshots/view_modal.png) | Detalhes do módulo com estrutura de arquivos e botão de cópia. |
 
 ## Pré-requisitos
 
