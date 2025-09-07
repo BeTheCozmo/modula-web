@@ -1,0 +1,383 @@
+/* Estilos globais para a aplicação Modula Web, tema escuro inspirado no NestJS com bordas suavizadas */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Garantir que o body tenha fundo escuro */
+html, body {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Sobrescrever fundos brancos do Bootstrap */
+.container, .modal-content, .auth-panel, .module-item, .profile {
+  background-color: #252525 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Contêiner principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Painéis de Login e Registro */
+.auth-panel {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.auth-panel h2 {
+  color: #e0234e;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.auth-panel input {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  background-color: #333333 !important;
+  border: 1px solid #555555;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.auth-panel input::placeholder {
+  color: #999999;
+}
+
+.auth-panel button {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  background-color: #e0234e !important;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.auth-panel button:hover {
+  background-color: #c81e41 !important;
+}
+
+.auth-panel a {
+  color: #e0234e;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-panel a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard h2 {
+  color: #e0234e;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.dashboard .btn-primary {
+  background-color: #e0234e !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-right: 10px;
+  color: #ffffff !important;
+}
+
+.dashboard .btn-primary:hover {
+  background-color: #c81e41 !important;
+}
+
+.dashboard .btn-secondary {
+  background-color: #444444 !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #ffffff !important;
+}
+
+.dashboard .btn-secondary:hover {
+  background-color: #555555 !important;
+}
+
+/* Contêiner para módulos com flexbox */
+.modules-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Module Item */
+.module-item {
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  min-width: 350px;
+  max-width: 350px;
+}
+
+.module-item h3 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.module-item p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.module-item p strong {
+  color: #e0234e;
+  font-weight: 600;
+}
+
+.module-item button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.module-item .btn-view {
+  background-color: #444444 !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+.module-item .btn-view:hover {
+  background-color: #555555 !important;
+}
+
+.module-item .btn-edit {
+  background-color: #17a2b8 !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+.module-item .btn-edit:hover {
+  background-color: #138496 !important;
+}
+
+.module-item .btn-delete {
+  background-color: #e0234e !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+.module-item .btn-delete:hover {
+  background-color: #c81e41 !important;
+}
+
+/* Modal (View, Edit, Upload) */
+.modal-content {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #e0234e !important;
+  color: #ffffff !important;
+  border-bottom: none;
+  padding: 15px 20px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.modal-body {
+  padding: 20px;
+  color: #e0e0e0;
+  background-color: #252525 !important;
+}
+
+.modal-body p strong {
+  color: #e0234e;
+}
+
+.modal-body pre {
+  background-color: #333333 !important;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #e0e0e0;
+  white-space: pre;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  line-height: 1.2;
+  overflow-x: auto;
+}
+
+.modal-body .copy-command-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.modal-body .copy-command-pre {
+  background-color: #333333 !important;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #e0e0e0;
+  white-space: nowrap;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.modal-body .copy-button {
+  background-color: #e0234e !important;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff !important;
+  flex-shrink: 0;
+}
+
+.modal-body .copy-button:hover {
+  background-color: #c81e41 !important;
+}
+
+.modal-body .copy-button.btn-success {
+  background-color: #28a745 !important;
+}
+
+.modal-body .copy-button.btn-success:hover {
+  background-color: #218838 !important;
+}
+
+/* Profile */
+.profile {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile h2 {
+  color: #e0234e;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.profile p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #e0e0e0;
+}
+
+.profile p strong {
+  color: #e0234e;
+}
+
+.profile button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.profile .btn-primary {
+  background-color: #e0234e !important;
+  border: none;
+  color: #ffffff !important;
+}
+
+.profile .btn-primary:hover {
+  background-color: #c81e41 !important;
+}
+
+.profile .btn-secondary {
+  background-color: #444444 !important;
+  border: none;
+  color: #ffffff !important;
+}
+
+.profile .btn-secondary:hover {
+  background-color: #555555 !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .auth-panel {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .module-item {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .dashboard h2 {
+    font-size: 24px;
+  }
+
+  .profile {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .modal-body .copy-command-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-body .copy-button {
+    margin-top: 10px;
+  }
+}
