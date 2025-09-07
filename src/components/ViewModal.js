@@ -37,7 +37,6 @@ const ViewModal = ({ show, onHide, mod }) => {
         <p><strong>ID:</strong> {mod._id}</p>
         <p><strong>Descrição:</strong> {mod.description}</p>
         <p><strong>Ferramenta:</strong> {mod.tool}</p>
-        <p><strong>Caminho Salvo:</strong> {mod.savedPath}</p>
         <p><strong>Publicador:</strong> {mod.publisherId}</p>
         <pre>
           Estrutura de Arquivos:<br/>
