@@ -22,10 +22,31 @@ const ViewModal = ({ show, onHide, mod }) => {
 
   const handleCopy = () => {
     const command = `modula download ${mod._id}`;
-    navigator.clipboard.writeText(command).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // Volta ao estado normal após 2 segundos
-    });
+    
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(command).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }).catch((err) => {
+        console.error('Failed to copy with Clipboard API:', err);
+        alert('Failed to copy. Please copy the command manually.');
+      });
+    } else {
+      // Fallback for non-secure contexts or unsupported browsers
+      const textarea = document.createElement('textarea');
+      textarea.value = command;
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (err) {
+        console.error('Fallback copy failed:', err);
+        alert('Failed to copy. Please copy the command manually.');
+      }
+      document.body.removeChild(textarea);
+    }
   };
 
   return (
